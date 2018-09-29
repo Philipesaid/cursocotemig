@@ -4,13 +4,14 @@ import React, { Component } from 'react';
 //import Contador from './Contador';
 //import ContadorPalavras from './ContadorPalavras';
 //import TextoConcatenado from './TextoConcatenado';
-import Square from './square';
+//import Square from './square';
+import IteradorJason from './IteradorJason';
 
 class App extends Component {
   render () {
     return (
       <div>
-        <Square/>
+        <IteradorJason/>
       </div>
       )
     }
