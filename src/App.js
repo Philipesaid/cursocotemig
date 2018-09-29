@@ -3,19 +3,17 @@ import React, { Component } from 'react';
 //import './App.css';
 //import Contador from './Contador';
 //import ContadorPalavras from './ContadorPalavras';
-import TextoConcatenado from './TextoConcatenado';
+//import TextoConcatenado from './TextoConcatenado';
+import Square from './square';
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div>
-      
-       <TextoConcatenado/>
-      
-        
+        <Square/>
       </div>
-    );
-  }
+      )
+    }
 }
 
 export default App;
