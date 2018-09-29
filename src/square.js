@@ -16,7 +16,11 @@ Square = ({ color }) => (
 }
 render () {
     return (
-      <div className='container'>
+      <div className='container' onClick = {
+          (e) => {
+              alert('Clicou no Quadrado')
+          }
+      }>
         {['blue', 'red', 'green', 'black'].map((square, index) => (
           <Square key={index} color={square} />
         ))}
