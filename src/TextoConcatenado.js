@@ -6,28 +6,31 @@ class TextoConcatenado extends Component {
     constructor(props){
         super(props);
         this.state = {
-            lName: '',
-            fName: '',
+            nome: '',
+            sobrenome: '',
+            
         };
-        this.handleFNameChange = this.handleFNameChange.bind(this)
-        this.handleLNameChange = this.handleLNameChange.bind(this)
+        this.pNome = this.pNome.bind(this)
+        this.sNome = this.sNome.bind(this)
+        
     }
     
-        handleFNameChange(event){
-        this.setState({fName: event.target.value});
+        pNome(e){
+        this.setState({nome: e.target.value});
 }
  
-        handleLNameChange(event){
-        this.setState({lName: event.target.value});
+        sNome(e){
+        this.setState({sobrenome: e.target.value});
 }
-    
+   
     render() {
       return (
         <div >
             
-            <p>Seu Primeiro Nome : <input type="text" value = {this.state.fName} onChange={this.handleFNameChange} /></p>
-            <p> Seu Segundo Nome : <input type="text" value = {this.state.lName} onChange={this.handleLNameChange} /></p>
-            <h3>Your full name is </h3> {this.state.fName} {this.state.lName}
+            <p>SeunNome : <input type="text" value = {this.state.nome} onChange={this.pNome}/></p>
+            <p> Seu Sobrenome : <input type="text" value = {this.state.sobrenome} onChange={this.sNome}/></p>
+            <h3>Seu Nome Completo é : </h3> <label>{this.state.nome} {this.state.sobrenome} </label>
+            
         </div>
       )
     }
