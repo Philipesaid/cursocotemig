@@ -2,36 +2,34 @@ import React, { Component } from 'react';
 
 
 class TextoConcatenado extends Component {
-    
+   
     constructor(props){
         super(props);
-        
+        this.state = {
+            lName: '',
+            fName: '',
+        };
+        this.handleFNameChange = this.handleFNameChange.bind(this)
+        this.handleLNameChange = this.handleLNameChange.bind(this)
     }
-  primeiraPalavra (event){
-        this.setState({
-            pPalavra: event.target.value
-       });
-    }
-    segundaPalavra (event){
-        this.setState({
-            sPalavra: event.target.value
-        });
-    }
+    
+        handleFNameChange(event){
+        this.setState({fName: event.target.value});
+}
+ 
+        handleLNameChange(event){
+        this.setState({lName: event.target.value});
+}
+    
     render() {
       return (
         <div >
             
-            <p>Escreva primeira palavra : 
-                <input type= "text" onChangeText = {(priPalavra)=> this.setState(priPalavra)}/>
-            </p>
-            <p>Escreva segunda palavra : 
-                <input type= "text" onChangeText = {(segPalavra)=> this.setState(segPalavra)}/>
-            </p>
-                
-            <label>O texto completo e : </label><input type="text"  />
-            
+            <p>Seu Primeiro Nome : <input type="text" value = {this.state.fName} onChange={this.handleFNameChange} /></p>
+            <p> Seu Segundo Nome : <input type="text" value = {this.state.lName} onChange={this.handleLNameChange} /></p>
+            <h3>Your full name is </h3> {this.state.fName} {this.state.lName}
         </div>
-      );
+      )
     }
   }
   
