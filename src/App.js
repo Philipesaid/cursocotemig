@@ -6,13 +6,14 @@ import React, { Component } from 'react';
 //import TextoConcatenado from './TextoConcatenado';
 //import Square from './square';
 //import IteradorJason from './IteradorJason';
-import IteradorJsonBackEnd from './IteradorJsonBackEnd';
+//import IteradorJsonBackEnd from './IteradorJsonBackEnd';
+import IteradorJsonBackEndAlunos from './IteradorJsonBackEndAlunos';
 
 class App extends Component {
   render () {
     return (
       <div>
-        <IteradorJsonBackEnd/>
+        <IteradorJsonBackEndAlunos/>
       </div>
       )
     }
